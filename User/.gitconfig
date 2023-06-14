@@ -1,0 +1,19 @@
+[user]
+	name = Archie
+	email = youkun@bilibili.com
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	ft = fetch
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[credential]
+	helper = store
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[rebase]
+	autoStash = true

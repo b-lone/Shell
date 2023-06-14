@@ -11,7 +11,7 @@
 #  chmod -R 755 "/path/to/bbgit.sh"
 # 4.配置路径，将下方 LOKTAR_DIR 修改成对应路径
 LOKTAR_DIR="/Users/archie/Documents/loktar"
-CURRENT_VERSION="2.22.0"
+CURRENT_VERSION="2.25.0"
 #
 #
 
@@ -35,16 +35,17 @@ errorMessage=""
 # mr
 # bb mr 2.7.0
 if [ "$1" = "mr" ];then
-    currentBranch=$(git rev-parse --abbrev-ref HEAD)
-    echo "========loktar========"
+    # currentBranch=$(git rev-parse --abbrev-ref HEAD)
+    # echo "========loktar========"
+    # cd $LOKTAR_DIR
+    # git push -u origin $currentBranch
+    # echo "=======BBStudio======="
+    # cd $BBSTUDIO_DIR
+    # git push -u origin $currentBranch
+    # echo "======================" 
     cd $LOKTAR_DIR
-    git push -uf origin $currentBranch
-    echo "=======BBStudio======="
-    cd $BBSTUDIO_DIR
-    git push -uf origin $currentBranch
-    echo "======================" 
-    cd $LOKTAR_DIR
-    ./bbgit mr -t bbstudio/release/r$CURRENT_VERSION
+#    ./bbgit mr -t bbstudio/release/r$CURRENT_VERSION
+    ./bbgit mr -t bbstudio/master
 #git
 #git br | grep 'test' | xargs git br -D
 #myV=$(git rev-parse --abbrev-ref HEAD)
@@ -88,7 +89,10 @@ elif [ "$1" = "build" ];then
         sh build.sh
     elif [ "$2" = "bbs" ] || [ "$2" = "bbstudio" ] || [ "$2" = "" ];then 
         cd $LOKTAR_DIR
-        ${LOKTAR_DIR}/build_bilistudio.sh
+        sh build.sh //bilistudio-universal:bili-studio
+    else
+        cd $LOKTAR_DIR
+        sh build.sh $2
     fi
     
 # open
