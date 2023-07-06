@@ -1,0 +1,2 @@
+#Customize terminal promp
+export PS1="%B%F{blue}@%T:%~ %# %f%b"

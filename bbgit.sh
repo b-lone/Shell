@@ -10,7 +10,7 @@
 # 3.修改权限
 #  chmod -R 755 "/path/to/bbgit.sh"
 # 4.配置路径，将下方 LOKTAR_DIR 修改成对应路径
-LOKTAR_DIR="/Users/archie/Documents/loktar"
+LOKTAR_DIR="/Users/archie/Documents/Work/loktar"
 CURRENT_VERSION="2.25.0"
 #
 #
@@ -23,7 +23,7 @@ declare -A urls=(
 ["loktar"]=$LOKTAR_DIR
 ["bbuper"]=$BBUPER_DIR 
 ["zprofile"]="/Users/archie/.zprofile" 
-["sh"]="/Users/archie/Documents/Shell/bbgit.sh"
+["sh"]="/Users/archie/Documents/Me/Shell/bbgit.sh"
 ["1"]="https://git.bilibili.co/"
 ["2"]="https://www.tapd.bilibili.co/my_worktable/"
 ["3"]="https://info.bilibili.co/pages/viewpage.action?pageId=154621015"

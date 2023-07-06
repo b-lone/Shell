@@ -1,0 +1,25 @@
+# source "/Users/archie/Documents/Me/Shell/User/.profile"
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="$PATH:/opt/homebrew/bin"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
+# Java
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
+export CPPFLAGS="$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.:$CPPFLAGS"
+
+# Mysql
+export PATH="$PATH:/usr/local/mysql/bin"
+
+# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+
+# My
+alias bb="/Users/archie/Documents/Me/Shell/bbgit.sh"
+alias bb2="/Users/archie/Documents/Me/Shell/bbgit2.sh"
