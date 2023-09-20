@@ -86,12 +86,15 @@ elif [ "$1" = "where" ];then
 elif [ "$1" = "build" ];then
     if [ "$2" = "loktar" ];then 
         cd $LOKTAR_DIR
+        ./bbgit pull
         sh build.sh
     elif [ "$2" = "bbs" ] || [ "$2" = "bbstudio" ] || [ "$2" = "" ];then 
         cd $LOKTAR_DIR
+        ./bbgit pull
         sh build.sh //bilistudio-universal:bili-studio
     else
         cd $LOKTAR_DIR
+        ./bbgit pull
         sh build.sh $2
     fi
     
