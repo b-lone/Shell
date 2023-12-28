@@ -9,9 +9,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 
 # Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home"
+export JAVA_HOME="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
-export CPPFLAGS="$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.:$CPPFLAGS"
+export CPPFLAGS="-I$JAVA_HOME/include:$CPPFLAGS"
 
 #adb
 export PATH="$PATH:/Users/archie/Library/Android/sdk/platform-tools"
@@ -26,3 +26,5 @@ export PATH="$PATH:/usr/local/mysql/bin"
 # My
 alias bb="/Users/archie/Documents/Me/Shell/bbgit.sh"
 alias bb2="/Users/archie/Documents/Me/Shell/bbgit2.sh"
+
+export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
